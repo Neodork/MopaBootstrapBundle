@@ -28,6 +28,7 @@ class LegendFormTypeExtension extends AbstractTypeExtension
     private $showLegend;
     private $showChildLegend;
     private $legendTag;
+    private $legendAttr;
     private $renderRequiredAsterisk;
     private $renderOptionalText;
 
@@ -42,6 +43,7 @@ class LegendFormTypeExtension extends AbstractTypeExtension
         $this->showLegend = $options['show_legend'];
         $this->showChildLegend = $options['show_child_legend'];
         $this->legendTag = $options['legend_tag'];
+        $this->legendAttr = $options['legend_attr'];
         $this->renderRequiredAsterisk = $options['render_required_asterisk'];
         $this->renderOptionalText = $options['render_optional_text'];
     }
@@ -55,6 +57,7 @@ class LegendFormTypeExtension extends AbstractTypeExtension
         $view->vars['show_legend'] = $options['show_legend'];
         $view->vars['show_child_legend'] = $options['show_child_legend'];
         $view->vars['legend_tag'] = $options['legend_tag'];
+        $view->vars['legend_attr'] = $options['legend_attr'];
         $view->vars['label_render'] = $options['label_render'];
         $view->vars['render_required_asterisk'] = $options['render_required_asterisk'];
         $view->vars['render_optional_text'] = $options['render_optional_text'];
@@ -80,6 +83,7 @@ class LegendFormTypeExtension extends AbstractTypeExtension
             'show_legend' => $this->showLegend,
             'show_child_legend' => $this->showChildLegend,
             'legend_tag' => $this->legendTag,
+            'legend_attr' => $this->legendAttr,
             'label_render' => true,
             'render_required_asterisk' => $this->renderRequiredAsterisk,
             'render_optional_text' => $this->renderOptionalText,
